@@ -9,6 +9,7 @@ private:
     int offset;//offset=2*s-1,s为最底层最左端的内部节点
     int numberOfPlayers;//竞赛选手数量
 public:
+    void play(int,int,int);
     void initialize(T *thePlayer,int theNumberOfPlayers);
     int loser() const;//返回输者的索引
     void rePlay(int thePlayer);//在参赛者thePlayer的分数变化后参赛
