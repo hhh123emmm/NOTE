@@ -15,7 +15,6 @@ public:
     ~LoserTree(){delete[] tree;delete[] temp;}
     int winner(){return tree[0];}//返回赢者
     void play(int,int,int);//比赛
-    void initialize(T *thePlayer,int theNumberOfPlayers);
     int winner(int x,int y) const{return player[x]<=player[y]?x:y;};//返回赢者的索引
     int loser(int x,int y) const{return player[x]<=player[y]?y:x;};//返回输者的索引
     void rePlay(int thePlayer,T newValue);//在参赛者thePlayer的分数变化后参赛
