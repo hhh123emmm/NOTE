@@ -8,6 +8,6 @@ long long dis[maxn];
 
 
 int main(){
-    memset(dis,0x3f,sizeof dis);
-    printf("%llx",dis[0]);
+    long long a=0x56f415ed;
+    printf("%lld",a);
 }
