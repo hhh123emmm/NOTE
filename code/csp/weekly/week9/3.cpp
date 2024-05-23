@@ -53,14 +53,14 @@ int main(){
             //<
             edge[a-1].push_back({b,c-1});
         }else if(k==4){
-            edge[b].push_back({a-1,1-c});
+            edge[b].push_back({a-1,-1-c});
         }else{
             edge[a-1].push_back({b,c});
             edge[b].push_back({a-1,-c});
         }
     }
-    for(int i=1;i<=n;i++) edge[0].push_back({i,inf});
+    for(int i=1;i<=n;i++){ edge[i-1].push_back({i,1}); edge[i].push_back({i-1,0});}//-------------------------------------
     if(spfa(0)) cout<<"impossible\n";
-    else cout<<dis[n]-dis[n-1]<<"\n";
+    else cout<<dis[n]-dis[0]<<"\n";
     return 0;
 }
